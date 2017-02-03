@@ -16,12 +16,12 @@
             Case "Triangulo"
                 Dim num As Integer = txtDerecho.Text
                 Dim num2 As Integer = txtIzquierdo.Text
-                Dim devuelve As Integer = rectangulo(num, num2)
+                Dim devuelve As Integer = triangulo(num, num2)
                 txtRespuesta.Text = devuelve
             Case "Paralelogramo"
                 Dim num As Integer = txtDerecho.Text
                 Dim num2 As Integer = txtIzquierdo.Text
-                Dim devuelve As Integer = rectangulo(num, num2)
+                Dim devuelve As Integer = paralelogramo(num, num2)
                 txtRespuesta.Text = devuelve
             Case ""
                 MessageBox.Show("Debe elegir algun metodo")
@@ -49,8 +49,8 @@
     End Function
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxAreas.SelectedIndexChanged
-        Dim numero As String = cbxAreas.SelectedItem
-        Select Case numero
+        calculo = cbxAreas.SelectedItem
+        Select Case calculo
             Case "Cuadrado"
                 calculo = "Cuadrado"
                 txtDerecho.Visible = True
